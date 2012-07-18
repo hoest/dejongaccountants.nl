@@ -127,7 +127,7 @@
           <li><a href="./?p=adres">Adresgegevens</a></li>
           <!--li><a href="./?p=vacatures">Vacatures</a></li-->
           <li><a href="./?p=boekhouding">Online boekhouding</a></li>
-          <li><a href="./?p=online">Online diensten</a></li>
+          <li><a href="https://acp.clientportal.nl/login.php?id=4871304755504477385042483138303d" target="_blank">Cli&#235;ntenportaal</a></li>
           <li><a href="./?p=aanmelden">Aanmelden nieuwsbrief</a></li>
           <li><a href="./?p=nieuws">Laatste nieuws</a></li>
           <li><a href="./?p=links">Links</a></li>
