@@ -16,6 +16,8 @@
     $pagetitle = ' - Links';
   } else if($_GET['p'] == 'online') {
     $pagetitle = ' - Online diensten';
+  } else if($_GET['p'] == 'boekhouding') {
+    $pagetitle = ' - Online boekhouding';
   } else if($_GET['p'] == 'klachten') {
     $pagetitle = ' - Klachtenregeling';
   } else if($_GET['p'] == 'voorwaarden') {
@@ -124,6 +126,7 @@
           <li><a href="./?p=home">Informatie</a></li>
           <li><a href="./?p=adres">Adresgegevens</a></li>
           <!--li><a href="./?p=vacatures">Vacatures</a></li-->
+          <li><a href="./?p=boekhouding">Online boekhouding</a></li>
           <li><a href="./?p=online">Online diensten</a></li>
           <li><a href="./?p=aanmelden">Aanmelden nieuwsbrief</a></li>
           <li><a href="./?p=nieuws">Laatste nieuws</a></li>
