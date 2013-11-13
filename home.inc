@@ -1,5 +1,5 @@
 <h2>Informatie</h2>
-<p>Wij zijn een middelgroot zelfstandig werkzaam accountantskantoor en al bijna 50 jaar werkzaam in de regio Eemland. Als AA-Accountant zijn wij gespecialiseerd in het midden- en kleinbedrijf en hechten veel waarde aan persoonlijk contact.</p>
+<p>Wij zijn een middelgroot zelfstandig werkzaam accountantskantoor en al meer dan 50 jaar werkzaam in de regio Eemland. Als AA-Accountant zijn wij gespecialiseerd in het midden- en kleinbedrijf en hechten veel waarde aan persoonlijk contact.</p>
 <p>Onze dienstverlening bestaat onder andere uit:</p>
 <ul>
   <li>het samenstellen, beoordelen of controleren van uw jaarrekening;</li>
