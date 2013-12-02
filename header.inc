@@ -104,7 +104,11 @@
     </script>
 <?php } ?>
   </head>
+<?php if($_GET['p']!=NULL && $_GET['p']!='') { ?>
+  <body class="<?php echo($_GET['p']); ?>">
+<?php } else { ?>
   <body>
+<?php } ?>
     <div id="main">
       <div id="header">
         <h1>
