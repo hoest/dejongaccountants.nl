@@ -132,7 +132,7 @@
           <!--li><a href="./?p=vacatures">Vacatures</a></li-->
           <li><a href="./?p=boekhouding">Online boekhouding</a></li>
           <li><a href="https://dejong.portal4collaboration.nl/" target="_blank">Cli&#235;ntenportaal</a></li>
-          <li><a href="https://salaris.dejongaccountants.nl:444/U4Online2/login?ReturnUrl=%2fu4online2" target="_blank">Salaris Online</a></li>
+          <li><a href="https://psonline.unit4saas.com/25000455" target="_blank">Salaris Online</a></li>
           <li><a href="./?p=aanmelden">Aanmelden nieuwsbrief</a></li>
           <li><a href="./?p=nieuws">Laatste nieuws</a></li>
           <li><a href="./?p=links">Links</a></li>
