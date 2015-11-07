@@ -31,9 +31,14 @@ gulp.task('js', function() {
              .pipe(gulp.dest('./_public/js/'));
 });
 
-gulp.task('copy', function() {
-  return gulp.src('./src/*.html')
+gulp.task('html', function() {
+  return gulp.src(['./src/*.html'])
              .pipe(gulp.dest('./_public'));
 });
 
-gulp.task('default', ['stylus', 'js', 'copy']);
+gulp.task('images', function() {
+  return gulp.src(['./src/images/**/*'])
+             .pipe(gulp.dest('./_public/images/'));
+});
+
+gulp.task('default', ['stylus', 'js', 'html', 'images']);

@@ -1,2 +1,4 @@
 _public/
 node_modules/
+.sublime-gulp.cache
+dejongaccountants.nl.sublime-workspace
