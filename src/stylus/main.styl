@@ -5,16 +5,16 @@ normalize-css()
 base()
 
 body
-  background-color: $light_gray
-  font-family: $normal
+  background-color $light_gray
+  font-family $normal
 
 h1, h2, h3
-  font-family: $condensed
+  font-family $condensed
   text-transform uppercase
-  margin-top: 0
+  margin-top 0
 
 a, h1, h2, h3
-  color: $dark_blue
+  color $dark_blue
 
 a
   text-decoration none
@@ -24,12 +24,12 @@ a
 
 .contact, header, main, footer
   center()
-  display: block
-  background-color: $white
-  padding: .5rem 1rem
+  display block
+  background-color $white
+  padding .5rem 1rem
 
   +above(600px)
-    max-width: 980px
+    max-width 980px
 
 .contact-wrapper
   fixed()
@@ -39,7 +39,7 @@ a
     background-color $darker_gray
     text-transform uppercase
     bold()
-    font-family: $condensed
+    font-family $condensed
 
     .menu-icon
       col(1/9)
@@ -47,7 +47,7 @@ a
 
     .belons
       col(8/9)
-      margin-right: 0
+      margin-right 0
 
     .mailons
       display none
@@ -66,13 +66,17 @@ a
       text-align right
 
 header
-  padding-top: 2.4rem;
+  padding-top 2.4rem
+  background-position 0 2.4rem
+  background-size cover
+  background-image url('../images/dejong-banner.jpg')
+  background-repeat no-repeat
 
   h1
-    display: inline
+    display inline
 
     span
-      display: none
+      display none
 
     .dejong-logo
       col(1/1)
@@ -80,27 +84,28 @@ header
     +above(600px)
       span
         col(2/3)
-        display: none
+        visibility hidden
+        display block
 
       .dejong-logo
         col(1/3)
 
 main
-  border-top: 1px solid $light_gray
-  border-bottom: 1px solid $light_gray
+  border-top 1px solid $light_gray
+  border-bottom 1px solid $light_gray
 
   aside
     +below(600px)
       display none
-      background-color: $light_gray
-      position: absolute
-      width: calc(100% - 2rem)
-      top: 2.4rem
-      left: 0
-      padding: 1rem
+      background-color $light_gray
+      position absolute
+      width calc(100% - 2rem)
+      top 2.4rem
+      left 0
+      padding 1rem
 
     h2
-      display: none
+      display none
 
     nav
       +above(600px)
@@ -108,21 +113,21 @@ main
 
       ul
         list-style none
-        padding: 0
-        margin: 0
+        padding 0
+        margin 0
 
         li
-          margin: .3rem 0
-          margin: 0
+          margin .3rem 0
+          margin 0
 
         +above(600px)
           li
-            margin: .3rem 0
+            margin .3rem 0
 
           a
-            glossy-button: $dark_blue
-            font-family: $condensed
-            font-size: 1.2rem
+            glossy-button $dark_blue
+            font-family $condensed
+            font-size 1.2rem
             display block
 
             &:hover
