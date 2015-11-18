@@ -25,15 +25,20 @@ a
 .contact, header, main, footer
   center()
   display block
-  background-color $white
   padding .5rem 1rem
+  z-index 5
+  position relative
 
   +above(600px)
     max-width 980px
 
+main, footer
+  background-color $white
+
 .contact-wrapper
   fixed()
   width 100%
+  z-index 15
 
   .contact
     background-color $darker_gray
@@ -46,20 +51,38 @@ a
       text-align right
 
     .belons
-      col(8/9)
+      col(6/9)
       margin-right 0
+
+    .social
+      col(2/9)
+      text-align right
 
     .mailons
       display none
 
+    .advies
+      display inline-block
+      margin-left 1em
+      padding-left 1em
+      border-left 1px solid #004a99
+
+    .social-icon
+      display inline-block
+      text-align center
+      width 1.5em
+
     +above(600px)
-      .menu-icon
+      .menu-icon, .social
         display none
 
       .mailons
         display block
 
-      .belons, .mailons
+      .belons
+        col(1/2)
+
+      .mailons
         col(1/2)
 
     .mailons
@@ -67,10 +90,9 @@ a
 
 header
   padding-top 2.4rem
-  background-position 0 2.4rem
-  background-size cover
-  background-image url('../images/dejong-banner.jpg')
-  background-repeat no-repeat
+
+  +above(600px)
+    height 320px
 
   h1
     display inline
@@ -104,12 +126,41 @@ main
       left 0
       padding 1rem
 
-    h2
+    .widget-container
       display none
+
+      +above(600px)
+        display block
+        margin-top 2rem
+
+    .widget_rss
+      h2, ul
+        margin 0
+
+      ul
+        padding-left 0
+        font-size .9rem
+        list-style none
+
+        li
+          margin-bottom: .5rem
+
+      .rsswidget
+        img
+          display none
+
+      li a.rsswidget, .rss-date
+          display block
+
+      .rss-date
+        font-size .8rem
 
     nav
       +above(600px)
         display block
+
+      h2
+        display none
 
       ul
         list-style none
@@ -133,11 +184,55 @@ main
             &:hover
               text-decoration none
 
+    .aa_btn
+      display none
+
+      +above(600px)
+        display block
+        text-align center
+        margin-top 2rem
+        margin-bottom 1rem
+
 footer
   text-align center
   font-size .8rem
 
+  ul.menu
+    list-style none
+
+    li
+      display inline-block
+
+      &:after
+        content ' - '
+
+      &:last-child:after
+        content ''
+
+
+  .aa_btn
+    display block
+    text-align center
+    margin-top 1rem
+    margin-bottom 1rem
+
+    +above(600px)
+      display none
+
+.banner
+  display none
+
 +above(600px)
+  .banner
+    center()
+    fixed()
+    opacity .5
+    z-index 1
+    width 100%
+    height 100%
+    background-image url('./images/dejong-foto-banner-bw.jpg')
+    background-repeat no-repeat
+
   aside
     col(1/3)
 

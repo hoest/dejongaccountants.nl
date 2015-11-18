@@ -5,22 +5,38 @@ var sourcemaps = require('gulp-sourcemaps');
 var stylint = require('gulp-stylint');
 var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
+var clean = require('gulp-clean');
+var concat = require('gulp-concat');
 
 var jeet = require('jeet');
 var rupture = require('rupture');
 var axis = require('axis');
 var autoprefixer = require('autoprefixer-stylus');
 
+gulp.task('clean', function () {
+  return gulp.src('./_public/**/*', {read: false})
+             .pipe(clean({
+                force: true
+              }));
+});
+
 gulp.task('stylus', function () {
   return gulp.src(['./src/stylus/*.styl', '!./src/stylus/_*.styl'])
              .pipe(stylint())
-             .pipe(sourcemaps.init())
+             // .pipe(sourcemaps.init())
              .pipe(stylus({
                compress: true,
                use: [rupture(), jeet(), axis(), autoprefixer()]
              }))
-             .pipe(sourcemaps.write('.'))
-             .pipe(gulp.dest('./_public/css'));
+             // .pipe(sourcemaps.write('.'))
+             .pipe(concat('style.css'))
+             .pipe(gulp.dest('./_public/'));
+});
+
+gulp.task('concat', function () {
+  return gulp.src(['./_public/css/*.css'])
+             .pipe(concat('styles.css'))
+             .pipe(gulp.dest('./_public/'));
 });
 
 gulp.task('js', function() {
@@ -32,7 +48,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src(['./src/*.html'])
+  return gulp.src(['./src/*.html', './src/*.php'])
              .pipe(gulp.dest('./_public'));
 });
 
