@@ -26,6 +26,9 @@
       De Jong, Accountants, Belastingadviseurs, Soest, Nederland, Accountancy,
       Ronald, Marcel, Belasting, Fincieel advies" />
 
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/images/dejong-logo.jpg" />
+
     <!-- if page is content page -->
     <?php if (is_single()) { ?>
     <meta property="og:url" content="<?php the_permalink() ?>"/>
