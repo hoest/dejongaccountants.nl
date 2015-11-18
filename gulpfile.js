@@ -7,6 +7,7 @@ var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
+var imagemin = require('gulp-imagemin');
 
 var jeet = require('jeet');
 var rupture = require('rupture');
@@ -23,12 +24,10 @@ gulp.task('clean', function () {
 gulp.task('stylus', function () {
   return gulp.src(['./src/stylus/*.styl', '!./src/stylus/_*.styl'])
              .pipe(stylint())
-             // .pipe(sourcemaps.init())
              .pipe(stylus({
                compress: true,
                use: [rupture(), jeet(), axis(), autoprefixer()]
              }))
-             // .pipe(sourcemaps.write('.'))
              .pipe(concat('style.css'))
              .pipe(gulp.dest('./_public/'));
 });
@@ -54,6 +53,10 @@ gulp.task('html', function() {
 
 gulp.task('images', function() {
   return gulp.src(['./src/images/**/*'])
+             .pipe(imagemin({
+               progressive: true,
+               svgoPlugins: [{removeViewBox: false}],
+             }))
              .pipe(gulp.dest('./_public/images/'));
 });
 
