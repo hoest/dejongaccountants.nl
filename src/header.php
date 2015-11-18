@@ -16,11 +16,15 @@
         }
       ?>
     </title>
+
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 
     <meta name="author" content="<?php bloginfo('name'); ?>" />
+    <meta name="keywords" content="De Jong Accountants Belastingadviseurs,
+      De Jong, Accountants, Belastingadviseurs, Soest, Nederland, Accountancy,
+      Ronald, Marcel, Belasting, Fincieel advies" />
 
     <!-- if page is content page -->
     <?php if (is_single()) { ?>
@@ -37,8 +41,6 @@
     <meta name="description" content="<?php bloginfo('description'); ?>" />
     <meta property="og:type" content="website" />
     <?php } ?>
-
-    <meta name="keywords" content="" />
 
     <?php wp_head(); ?>
 
