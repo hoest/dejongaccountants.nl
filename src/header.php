@@ -28,18 +28,23 @@
 
     <meta property="og:locale" content="nl_NL" />
     <meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/images/dejong-logo.jpg" />
+    <meta property="og:url" content="<?php the_permalink(); ?>"/>
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+
+    <?php if(is_home() || is_front_page()) { ?>
+    <meta property="og:title" content="Welkom bij <?php bloginfo('name'); ?>"/>
+    <?php } else { ?>
+    <meta property="og:title" content="<?php echo trim(wp_title('', false)); ?>"/>
+    <?php } ?>
 
     <!-- if page is content page -->
     <?php if (is_single()) { ?>
-    <meta property="og:url" content="<?php the_permalink() ?>"/>
-    <meta property="og:title" content="<?php single_post_title(''); ?>" />
     <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
     <meta name="description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
     <meta property="og:type" content="article" />
 
     <!-- if page is others -->
     <?php } else { ?>
-    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
     <meta property="og:description" content="<?php bloginfo('description'); ?>" />
     <meta name="description" content="<?php bloginfo('description'); ?>" />
     <meta property="og:type" content="website" />
